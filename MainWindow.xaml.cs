@@ -1,3 +1,5 @@
+using ABI.Windows.Foundation;
+using DigiBore.Model;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -27,16 +29,35 @@ namespace DigiBore
         {
             this.InitializeComponent();
             string currentYear = DateTime.Now.Year.ToString();
-            LoadProjectList(currentYear);
+            InitData(currentYear);
             Year.Text = currentYear;
 
         }
 
-        private void LoadProjectList(string year) 
+        private void InitData(string year)
         {
             var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers\\Dossiers " + year);
             ProjectList.ItemsSource = directories;
             Year.Text = year;
+
+            // Skip header
+            directories = directories.Skip(1).ToArray();
+
+            foreach (var project in directories)
+            {
+                var pbmInfo = project.Split('\\');
+                Project.Add(new()
+                {
+                    Id = int.Parse(pbmInfo[0]),
+                    Name = pbmInfo[1],
+                    Description = pbmInfo[2],
+                    Amount = int.Parse(pbmInfo[3]),
+                    Price = decimal.Parse(pbmInfo[4], CultureInfo.GetCultureInfo("nl-BE")),
+                    Website = pbmInfo[5],
+                    Email = pbmInfo[6],
+                    ImageLocation = pbmInfo[7],
+                });
+            }
         }
         private void previousyearclick(object sender, RoutedEventArgs e)
         {

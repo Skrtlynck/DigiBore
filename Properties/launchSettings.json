@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DigiBore (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DigiBore (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
