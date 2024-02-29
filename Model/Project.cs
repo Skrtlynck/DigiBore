@@ -9,7 +9,7 @@ namespace DigiBore.Model;
 
 public class Project
 {
-    public string Path { get; set; }
+    public string ProjectPath { get; set; }
 
     public string ProjectNumber { get; set; }
 

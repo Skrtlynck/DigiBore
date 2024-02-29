@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BIBU\\DigiBore\\DigiBore.csproj": {}
+    "C:\\BIBU\\DigiBore Test\\DigiBore.csproj": {}
   },
   "projects": {
-    "C:\\BIBU\\DigiBore\\DigiBore.csproj": {
+    "C:\\BIBU\\DigiBore Test\\DigiBore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BIBU\\DigiBore\\DigiBore.csproj",
+        "projectUniqueName": "C:\\BIBU\\DigiBore Test\\DigiBore.csproj",
         "projectName": "DigiBore",
-        "projectPath": "C:\\BIBU\\DigiBore\\DigiBore.csproj",
+        "projectPath": "C:\\BIBU\\DigiBore Test\\DigiBore.csproj",
         "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-        "outputPath": "C:\\BIBU\\DigiBore\\obj\\",
+        "outputPath": "C:\\BIBU\\DigiBore Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,18 @@
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
           "dependencies": {
+            "CommunityToolkit.WinUI.UI.Controls": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.Windows.SDK.BuildTools": {
               "target": "Package",
               "version": "[10.0.22621.755, )"

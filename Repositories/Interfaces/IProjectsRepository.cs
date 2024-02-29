@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DigiBore.Repositories.Interfaces;
 
-public interface IProjectRepository
+public interface IProjectsRepository
 {
     public ObservableCollection<Project> Projects { get; }
 

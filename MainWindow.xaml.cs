@@ -1,5 +1,8 @@
 using ABI.Windows.Foundation;
+using CommunityToolkit.WinUI.UI.Controls;
 using DigiBore.Model;
+using DigiBore.Repositories;
+using DigiBore.Views;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -28,70 +31,20 @@ namespace DigiBore
         public MainWindow()
         {
             this.InitializeComponent();
-            string currentYear = DateTime.Now.Year.ToString();
-            InitData(currentYear);
-            Year.Text = currentYear;
+            ExtendsContentIntoTitleBar = true;
+            SetTitleBar(AppTitleBar);
 
+            SetContentPage(typeof(HomePage).FullName!);
         }
-
-        private void InitData(string year)
+        public void SetContentPage(string pageName)
         {
-            var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers\\Dossiers " + year);
-            ProjectList.ItemsSource = directories;
-            Year.Text = year;
-
-            // Skip header
-            directories = directories.Skip(1).ToArray();
-
-            foreach (var project in directories)
-            {
-                var pbmInfo = project.Split('\\');
-                Project.Add(new()
-                {
-                    Id = int.Parse(pbmInfo[0]),
-                    Name = pbmInfo[1],
-                    Description = pbmInfo[2],
-                    Amount = int.Parse(pbmInfo[3]),
-                    Price = decimal.Parse(pbmInfo[4], CultureInfo.GetCultureInfo("nl-BE")),
-                    Website = pbmInfo[5],
-                    Email = pbmInfo[6],
-                    ImageLocation = pbmInfo[7],
-                });
-            }
+            var pageType = Type.GetType(pageName);
+            contentFrame.Navigate(pageType);
         }
-        private void previousyearclick(object sender, RoutedEventArgs e)
+        private void LoadProjectsButtonClick(object sender, RoutedEventArgs e)
         {
-            string yearstring = Year.Text;
-            int year = int.Parse(yearstring);
-            if (year != 2023)
-            {
-                int newyear = year - 1;
-                LoadProjectList(newyear.ToString());
-                Error.Text = "";
-            }
-            else
-            {
-                Error.Text = "Geen data beschikbaar pre 2023, open deze bestanden met Geodrill";
-            }
-
-
-        }
-
-        private void nextyearclick(object sender, RoutedEventArgs e)
-        {
-            string yearstring = Year.Text;
-            int year = int.Parse(yearstring);
-            if (year != DateTime.Now.Year)
-            {
-                int newyear = year + 1;
-                LoadProjectList(newyear.ToString());
-                Error.Text = "";
-            }
-            else
-            {
-                Error.Text = "Geen data beschikbaar uit de toekomst";
-            }
-
+            LoadProjectsButton.Visibility = Visibility.Collapsed;
+            SetContentPage(typeof(ProjectPage).FullName!);
         }
     }
 }
