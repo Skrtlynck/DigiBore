@@ -30,7 +30,7 @@ public class ProjectsRepository : IProjectsRepository
     public void InitData(string year)
     {
         var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers\\Dossiers " + year);
-
+        //var directories = Directory.GetDirectories("C:\\Technische data\\Dossiers\\Dossiers " + year);
         // Skip header
         directories = directories.Skip(1).ToArray();
 

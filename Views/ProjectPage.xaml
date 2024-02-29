@@ -9,38 +9,56 @@
       Background="Transparent">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
         <StackPanel>
-            <TextBlock x:Name="Error" FontSize="20" HorizontalAlignment="Center" Height="auto" Foreground="red" Margin="0,25,0,25"/>
+            <TextBlock x:Name="Error" FontSize="18" HorizontalAlignment="Center" Height="auto" Foreground="DarkRed" Margin="0,15,0,15" FontFamily="Calibri"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15,0,0,0">
                 <Button Content='Vorig jaar' Margin="0,-15,0,0" Click="previousyearclick"/>
                 <TextBlock x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" HorizontalAlignment="Center" Height="auto" FontFamily="MintSans"/>
                 <Button Content="Volgend jaar" Margin="0,-15,0,0" Click="nextyearclick"/>
             </StackPanel>
-            <controls:DataGrid  x:Name="dataGrid"
+        </StackPanel>
+
+        <controls:DataGrid  x:Name="dataGrid"
                                 ItemsSource="{Binding Projects}"
                                 AutoGenerateColumns="False"
                                 CanUserSortColumns="True"
-                                Sorting="DataGrid_Sorting"               
-                                AlternatingRowBackground="LightGray"
+                                Sorting="DataGrid_Sorting"
+                                AlternatingRowBackground="#2999"
                                 AreRowGroupHeadersFrozen="True"
-                                Margin="10">
+                                FontFamily="calibri"
+                                FontWeight="SemiLight"
+                                Grid.Row="1"
+                                Margin="10"
+                                IsReadOnly="True">
                 <controls:DataGrid.RowStyle>
                     <Style TargetType="controls:DataGridRow">
                         <Setter Property="controls:DataGridRow.ContextFlyout">
                             <Setter.Value>
                                 <MenuFlyout>
+                                    <MenuFlyoutItem x:Name="OpenFolder"
+                                                    Click="OpenFolder_Click"
+                                                    Text="Open de map van dit project"/>
+                                    <MenuFlyoutItem x:Name="OpenDrilling"
+                                                    Click="OpenDrilling_Click"
+                                                    Text="Open de boorstaat van dit project"/>
                                 </MenuFlyout>
                             </Setter.Value>
                         </Setter>
                     </Style>
                 </controls:DataGrid.RowStyle>
                 <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn Binding="{Binding ProjectNumber}"
-                          Header="Dossiernummer"
-                          Width="auto"
-                          CanUserSort="true"
-                          FontSize="20"
-                          Tag="ProjectNumber" >
+                    <controls:DataGridTextColumn  Binding="{Binding ProjectNumber}"
+                                                  Header="Dossiernummer"
+                                                  FontWeight="Bold"
+                                                 
+                                                  Width="auto"
+                                                  CanUserSort="true"
+                                                  FontSize="20"
+                                                  Tag="ProjectNumber" >
                         <controls:DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="TextBlock.TextWrapping" Value="Wrap" />
@@ -49,27 +67,25 @@
                         </controls:DataGridTextColumn.ElementStyle>
                     </controls:DataGridTextColumn>
                     <controls:DataGridTextColumn Binding="{Binding Customer}"
-                          Header="Klant"
-                          Width="auto"  
-                          FontSize="20"             
-                          CanUserSort="true"
-                          Tag="Customer" />
+                                                  Header="Klant"
+                                                  Width="auto"  
+                                                  FontSize="20"             
+                                                  CanUserSort="true"
+                                                  Tag="Customer"/>
                     <controls:DataGridTextColumn Binding="{Binding Location}"
-                          Header="Gemeente"
-                          Width="10*" 
-                          FontSize="20"
-                          CanUserSort="true"
-                          Tag="Location"
-                          />
+                                                  Header="Gemeente"
+                                                  Width="10*" 
+                                                  FontSize="20"
+                                                  CanUserSort="true"
+                                                  Tag="Location"/>
                     <controls:DataGridTextColumn Binding="{Binding LastEdited}"
-                          Header="Laatst aangepast"
-                          Width="auto"
-                          FontSize="20"
-                          CanUserSort="true"
-                          SortDirection="Descending"
-                          Tag="LastEdited" />
+                                                  Header="Laatst aangepast"
+                                                  Width="auto"
+                                                  FontSize="20"
+                                                  CanUserSort="true"
+                                                  SortDirection="Descending"
+                                                  Tag="LastEdited"/>
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
-        </StackPanel>
     </Grid>
 </Page>

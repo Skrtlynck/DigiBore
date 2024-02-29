@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media.Imaging;
 using System;
 using System.Linq;
+using System.Diagnostics;
 
 namespace DigiBore.Views;
 
@@ -99,7 +100,15 @@ public sealed partial class ProjectPage : Page
         }
     }
 
-
+    private void OpenFolder_Click(object sender, RoutedEventArgs e)
+    {
+        string folderpath = ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).ProjectPath;
+        Process.Start(folderpath);
+    }
+    private void OpenDrilling_Click(object sender, RoutedEventArgs e)
+    {
+        //strijden voor nieuw boorprogramma
+    }
 }
 
 

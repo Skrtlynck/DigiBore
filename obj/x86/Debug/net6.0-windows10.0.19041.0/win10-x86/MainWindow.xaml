@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <Grid x:ConnectionId='2' x:Name="AppTitleBar" Grid.Row="0" Background="{ThemeResource SystemAltMediumColor}">
-            <TextBlock Text="DigiBore" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,5,0,0" FontFamily="MintSans" Foreground="Black"/>
+            <TextBlock Text="DigiBore" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,5,0,0" FontFamily="MintSans" Foreground="Black"/>
         </Grid>
         <StackPanel Grid.Row="1">
             <Button x:ConnectionId='3' x:Name="LoadProjectsButton" Content="Laad de projecten van dit jaar in" FontSize="25" Margin="10" HorizontalAlignment="Center"                                />
