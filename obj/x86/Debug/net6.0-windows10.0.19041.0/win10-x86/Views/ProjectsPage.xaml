@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Page x:Class="DigiBore.Views.ProjectPage"
+<Page x:Class="DigiBore.Views.ProjectsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
@@ -10,15 +10,21 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <TextBlock x:ConnectionId='5' x:Name="Error" FontSize="20" HorizontalAlignment="Center" Height="auto" Foreground="red" Margin="0,25,0,25"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock x:ConnectionId='6' x:Name="Error" FontSize="18" HorizontalAlignment="Center" Height="auto" Foreground="DarkRed" Margin="0,15,0,15" FontFamily="Calibri"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15,0,0,0">
-                <Button x:ConnectionId='6' Content='Vorig jaar' Margin="0,-15,0,0"                          />
-                <TextBlock x:ConnectionId='7' x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" HorizontalAlignment="Center" Height="auto" FontFamily="MintSans"/>
-                <Button x:ConnectionId='8' Content="Volgend jaar" Margin="0,-15,0,0"                      />
+                <Button x:ConnectionId='7' Content='Vorig jaar' Margin="0,-15,0,0"                          />
+                <TextBlock x:ConnectionId='8' x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" Height="auto" FontFamily="MintSans"/>
+                <Button x:ConnectionId='9' Content="Volgend jaar" Margin="0,-15,0,0"                      />
             </StackPanel>
         </StackPanel>
 
@@ -29,7 +35,10 @@
                                                           
                                 AlternatingRowBackground="#2999"
                                 AreRowGroupHeadersFrozen="True"
+                                FontFamily="calibri"
+                                FontWeight="SemiLight"
                                 Grid.Row="1"
+                                Grid.ColumnSpan="3"
                                 Margin="10"
                                 IsReadOnly="True">
                 <controls:DataGrid.RowStyle>
@@ -40,10 +49,13 @@
                                     <MenuFlyoutItem x:ConnectionId='3' x:Name="OpenFolder"
                                                                             
                                                     Text="Open de map van dit project"/>
-                                    <MenuFlyoutItem x:ConnectionId='4' x:Name="OpenDrilling"
-                                                                              
-                                                    Text="Open de boorstaat van dit project"/>
-                                </MenuFlyout>
+                                    <MenuFlyoutItem x:ConnectionId='4' x:Name="OpenProject"
+                                                                             
+                                                    Text="Open dit project"/>
+                                <MenuFlyoutItem x:ConnectionId='5' x:Name="CreateRapport"
+                                                                               
+                                                    Text="Creëer een rapport voor dit project"/>
+                            </MenuFlyout>
                             </Setter.Value>
                         </Setter>
                     </Style>

@@ -9,14 +9,16 @@ using Microsoft.UI.Xaml.Media.Imaging;
 using System;
 using System.Linq;
 using System.Diagnostics;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace DigiBore.Views;
 
-public sealed partial class ProjectPage : Page
+public sealed partial class ProjectsPage : Page
 {
     private readonly ProjectsViewModel _projectsViewModel = App.GetService<ProjectsViewModel>();
 
-    public ProjectPage()
+    public ProjectsPage()
     {
         InitializeComponent();
         DataContext = _projectsViewModel;
@@ -103,11 +105,31 @@ public sealed partial class ProjectPage : Page
     private void OpenFolder_Click(object sender, RoutedEventArgs e)
     {
         string folderpath = ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).ProjectPath;
-        Process.Start(folderpath);
+        //Process.Start(folderpath);
+        //dit werkt nog niet naar behoren, mss skippen
     }
-    private void OpenDrilling_Click(object sender, RoutedEventArgs e)
+    private void OpenProject_Click(object sender, RoutedEventArgs e)
     {
         //strijden voor nieuw boorprogramma
+        var xmlpath = ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).ProjectPath + "\\" + ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).ProjectNumber + "_" + ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).Customer + "_" + ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).Location + ".xml";
+        var number = ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).ProjectNumber;
+        var customer = ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).Customer;
+        var location = ((DigiBore.Model.Project)((Microsoft.UI.Xaml.FrameworkElement)sender).DataContext).Location;
+        if (File.Exists(xmlpath))
+        {
+            Window projectWindow = new ProjectWindow(xmlpath, number, customer, location);
+            projectWindow.Activate();
+        }
+        else
+        {
+            Window projectWindow = new ProjectWindow("NewFile", number, customer, location);
+            projectWindow.Activate();
+        }
+    }
+    private void CreateRapport_Click(object sender, RoutedEventArgs e)
+    {
+        //vanaf folder openen gaat via een klik, via deze knop de map rapport templates laten openen
+        //Process.Start(@"L:\Technische data\Rapport Templates);
     }
 }
 

@@ -12,8 +12,10 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Views\DrillingWindow.xaml" />
     <None Remove="Views\HomePage.xaml" />
-    <None Remove="Views\ProjectPage.xaml" />
+    <None Remove="Views\ProjectsPage.xaml" />
+    <None Remove="Views\ProjectWindow.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,10 +46,20 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\DrillingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\ProjectWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Views\HomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Views\ProjectPage.xaml">
+    <Page Update="Views\ProjectsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

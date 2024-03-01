@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:ConnectionId='1'
+    x:Name="DrillingWindowName"
+    x:Class="DigiBore.Views.DrillingWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DigiBore.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Boring">
+
+    <Grid>
+        <ScrollViewer x:ConnectionId='2' x:Name="AndereInfo" Grid.Column="2">
+            <StackPanel VerticalAlignment="Top" Orientation="Vertical" Padding="15">
+                <TextBlock Text="Omstorting" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,5" FontSize="16"/>
+                <NumberBox x:ConnectionId='3' x:Name="OmstortingTextBox" Width="100" Text="0,5"/>
+                <TextBlock Text="Peilbuis 1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,3" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBox x:ConnectionId='42' x:Name="Beginklei1TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Begin klei"/>
+                    <TextBox x:ConnectionId='43' x:Name="Eindeklei1TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Einde klei"/>
+                    <TextBox x:ConnectionId='44' x:Name="Beginfilter1TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Begin filter"/>
+                    <TextBox x:ConnectionId='45' x:Name="Eindefilter1TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Einde filter"/>
+                    <TextBox x:ConnectionId='46' x:Name="Zandvang1TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Zandvang"/>
+                    <TextBox x:ConnectionId='47' x:Name="Peilbuis1ZTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Z top buis"/>
+                    <TextBox x:ConnectionId='48' x:Name="Peilbuis1rustTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Rustpeil"/>
+                </StackPanel>
+                <TextBlock Text="Peilbuis 2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,3" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBox x:ConnectionId='35' x:Name="Beginklei2TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Begin klei"/>
+                    <TextBox x:ConnectionId='36' x:Name="Eindeklei2TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Einde klei"/>
+                    <TextBox x:ConnectionId='37' x:Name="Beginfilter2TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Begin filter"/>
+                    <TextBox x:ConnectionId='38' x:Name="Eindefilter2TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Einde filter"/>
+                    <TextBox x:ConnectionId='39' x:Name="Zandvang2TextBox" Width="auto" Margin="5" TextAlignment="Center"  PlaceholderText="Zandvang"/>
+                    <TextBox x:ConnectionId='40' x:Name="Peilbuis2ZTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Z top buis"/>
+                    <TextBox x:ConnectionId='41' x:Name="Peilbuis2rustTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Rustpeil"/>
+                </StackPanel>
+                <TextBlock Text="Peilbuis 3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,3" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBox x:ConnectionId='28' x:Name="Beginklei3TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Begin klei"/>
+                    <TextBox x:ConnectionId='29' x:Name="Eindeklei3TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Einde klei"/>
+                    <TextBox x:ConnectionId='30' x:Name="Beginfilter3TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Begin filter"/>
+                    <TextBox x:ConnectionId='31' x:Name="Eindefilter3TextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Einde filter"/>
+                    <TextBox x:ConnectionId='32' x:Name="Zandvang3TextBox" Width="auto" Margin="5" TextAlignment="Center"  PlaceholderText="Zandvang"/>
+                    <TextBox x:ConnectionId='33' x:Name="Peilbuis3ZTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Z top buis"/>
+                    <TextBox x:ConnectionId='34' x:Name="Peilbuis3rustTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Rustpeil"/>
+                </StackPanel>
+                <TextBlock Text="Extra kleistops" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,5" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="Eerste" VerticalAlignment="Center"/>
+                    <NumberBox x:ConnectionId='22' x:Name="Beginkleistop1TextBox" Width="auto" Margin="5" PlaceholderText="Begin"/>
+                    <NumberBox x:ConnectionId='23' x:Name="Eindekleistop1TextBox" Width="auto" Margin="5" PlaceholderText="Einde"/>
+                    <TextBlock Text="Tweede" VerticalAlignment="Center" Margin="25,0,0,0"/>
+                    <NumberBox x:ConnectionId='24' x:Name="Beginkleistop2TextBox" Width="auto" Margin="5" PlaceholderText="Begin"/>
+                    <NumberBox x:ConnectionId='25' x:Name="Eindekleistop2TextBox" Width="auto" Margin="5" PlaceholderText="Einde"/>
+                    <TextBlock Text="Derde" VerticalAlignment="Center" Margin="25,0,0,0"/>
+                    <NumberBox x:ConnectionId='26' x:Name="Beginkleistop3TextBox" Width="auto" Margin="5" PlaceholderText="Begin"/>
+                    <NumberBox x:ConnectionId='27' x:Name="Eindekleistop3TextBox" Width="auto" Margin="5" PlaceholderText="Einde"/>
+                </StackPanel>
+                <TextBlock Text="Ongeroerde Monsters" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,5" FontSize="16"/>
+                <TextBox x:ConnectionId='4' x:Name="OMTextBox" Margin="5" PlaceholderText="genoteerd als 4.5-5*7.5-8*..."/>
+                <TextBlock Text="Vrije tekst en Stratigrafische informatie" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,5" FontSize="16"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" PlaceholderText="Diepte"/>
+                    <TextBox x:ConnectionId='21' x:Name="Vrijetekst1" Width="655" Margin="5" TextAlignment="Center" PlaceholderText="Tekst (eventueel met een | gevolgd door einddiepte indien het gaat over stratigrafische data)"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5"/>
+                    <TextBox x:ConnectionId='20' x:Name="Vrijetekst2" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='19' x:Name="Vrijetekst3" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='18' x:Name="Vrijetekst4" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='17' x:Name="Vrijetekst5" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='16' x:Name="Vrijetekst6" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='15' x:Name="Vrijetekst7" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='14' x:Name="Vrijetekst8" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="auto" Margin="5" />
+                    <TextBox x:ConnectionId='13' x:Name="Vrijetekst9" Width="655" Margin="5" TextAlignment="Center"/>
+                </StackPanel>
+                <TextBlock Text="Coordinaten (Lambert72)" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,5" FontSize="16"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBox x:ConnectionId='10' x:Name="XTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="X"/>
+                    <TextBox x:ConnectionId='11' x:Name="YTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Y"/>
+                    <TextBox x:ConnectionId='12' x:Name="ZTextBox" Width="auto" Margin="5" TextAlignment="Center" PlaceholderText="Z"/>
+                </StackPanel>
+                <TextBlock Text="Grondwaterpeil (m-mv)" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,5" FontSize="16"/>
+                <TextBox x:ConnectionId='5' x:Name="GrondwaterpeilTextBox" Width="auto" TextAlignment="Center"/>
+                <TextBlock Text="Geboorde diepte (m)" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,5" FontSize="16"/>
+                <TextBox x:ConnectionId='6' x:Name="GeboordediepteTextBox" Width="auto" TextAlignment="Center"/>
+                <TextBlock Text="Diepte per blad (tussen 5 en 12)" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,5" FontSize="16"/>
+                <NumberBox x:ConnectionId='7' x:Name="BladdiepteNumberBox" SpinButtonPlacementMode="Inline" Text="10" Width="125"/>
+                <TextBox x:ConnectionId='8' x:Name="DatumWaterpeil" Width="auto" TextAlignment="Center" PlaceholderText="Datum waterpeilmeting (DD/MM/JJJJ)"/>
+                <TextBox x:ConnectionId='9' x:Name="UurWaterpeil" Width="auto" TextAlignment="Center" PlaceholderText="Uur waterpeilmeting (uu:m)"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
+

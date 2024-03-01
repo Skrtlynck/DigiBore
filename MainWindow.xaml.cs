@@ -44,7 +44,7 @@ namespace DigiBore
         private void LoadProjectsButtonClick(object sender, RoutedEventArgs e)
         {
             LoadProjectsButton.Visibility = Visibility.Collapsed;
-            SetContentPage(typeof(ProjectPage).FullName!);
+            SetContentPage(typeof(ProjectsPage).FullName!);
         }
     }
 }
