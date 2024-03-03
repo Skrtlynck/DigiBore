@@ -1,1 +1,1 @@
-C:\BIBU\DigiBore Test\DigiBore.csproj;x86
+C:\BIBU\DigiBore\DigiBore.csproj;x86

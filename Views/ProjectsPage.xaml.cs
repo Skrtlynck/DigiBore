@@ -23,7 +23,10 @@ public sealed partial class ProjectsPage : Page
         InitializeComponent();
         DataContext = _projectsViewModel;
         Year.Text = DateTime.Now.Year.ToString();
+        filterBox.Text = DateTime.Now.Year.ToString().Substring(2);
+        ApplyDataGridFilter();
     }
+
     private void previousyearclick(object sender, RoutedEventArgs e)
     {
         string yearstring = Year.Text;
@@ -33,8 +36,7 @@ public sealed partial class ProjectsPage : Page
             int newyear = year - 1;
             Year.Text = newyear.ToString();
             Error.Text = "";
-            
-            //hier nog fixen dat er nieuwe projecten worden geladen OF dat alle projecten worden geladen bij openen, en dat de grid nieuwe itemssource krijgt voor bijhorend jaar
+            filterBox.Text = newyear.ToString().Substring(2);
         }
         else
         {
@@ -53,10 +55,9 @@ public sealed partial class ProjectsPage : Page
             int newyear = year + 1;
             Year.Text = newyear.ToString();
             Error.Text = "";
-            
-            //hier nog fixen dat er nieuwe projecten worden geladen OF dat alle projecten worden geladen bij openen, en dat de grid nieuwe itemssource krijgt voor bijhorend jaar
-
+            filterBox.Text = newyear.ToString().Substring(2);
         }
+
         else
         {
             Error.Text = "Geen data beschikbaar uit de toekomst";
@@ -74,14 +75,11 @@ public sealed partial class ProjectsPage : Page
             var propertyInfo = type.GetProperty(tag!);
 
             dataGrid.ItemsSource = direction == DataGridSortDirection.Ascending
-                       ? _projectsViewModel.Projects.OrderBy(p => propertyInfo!.GetValue(p))
-                       : _projectsViewModel.Projects.OrderByDescending(p => propertyInfo!.GetValue(p));
-
+                       ? _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower())).OrderBy(p => propertyInfo!.GetValue(p))
+                       : _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower())).OrderByDescending(p => propertyInfo!.GetValue(p));
             e.Column.SortDirection = direction;
-
             ClearColumSortDirections(tag!);
         }
-
     }
 
     private DataGridSortDirection GetColumSortDirection(DataGridColumn dataGridColumn)
@@ -126,10 +124,24 @@ public sealed partial class ProjectsPage : Page
             projectWindow.Activate();
         }
     }
+
     private void CreateRapport_Click(object sender, RoutedEventArgs e)
     {
         //vanaf folder openen gaat via een klik, via deze knop de map rapport templates laten openen
         //Process.Start(@"L:\Technische data\Rapport Templates);
+    }
+
+    private void ApplyDataGridFilterNu(object sender, TextChangedEventArgs e)
+    {
+        ApplyDataGridFilter();
+    }
+
+    private void ApplyDataGridFilter()
+    {
+        if (filterBox.Text is not null)
+        {
+            dataGrid.ItemsSource = _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower()));
+        }
     }
 }
 

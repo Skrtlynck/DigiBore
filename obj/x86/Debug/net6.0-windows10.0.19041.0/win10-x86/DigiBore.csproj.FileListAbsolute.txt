@@ -621,7 +621,6 @@ C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Microso
 C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\System.Diagnostics.EventLog.Messages.dll
 C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\System.Diagnostics.EventLog.dll
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\HomePage.xbf
-C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectPage.xbf
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\ColorCode.Core.dll
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\ColorCode.WinUI.dll
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\CommunityToolkit.Common.dll
@@ -669,12 +668,8 @@ C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\clrcompressi
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_6.0.2523.51912.dll
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\HomePage.g.i.cs
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\HomePage.g.cs
-C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectPage.g.i.cs
-C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectPage.g.cs
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\HomePage.xaml
-C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectPage.xaml
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\HomePage.xbf
-C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectPage.xbf
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\DigiBore.sourcelink.json
 C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.g.i.cs
 C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.g.cs
@@ -691,3 +686,18 @@ C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\D
 C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.cs
 C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xaml
 C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xbf
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.i.cs
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.cs
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.g.i.cs
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.g.cs
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.g.i.cs
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.g.cs
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xaml
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.xaml
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.xaml
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xbf
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.xbf
+C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.xbf
+C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xbf
+C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.xbf
+C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.xbf

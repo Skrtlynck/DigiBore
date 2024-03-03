@@ -19,6 +19,8 @@ public class Project
 
     public DateTime LastEdited { get; set; }
 
+    public string ProjectYear { get; set; }
+
     public Project()
     {
 

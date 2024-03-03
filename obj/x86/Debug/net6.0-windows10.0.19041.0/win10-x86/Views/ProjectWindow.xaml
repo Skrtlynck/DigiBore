@@ -11,27 +11,23 @@
 
     <Grid Background="#f9f9f9">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
+
         </Grid.RowDefinitions>
         <Grid x:ConnectionId='2' x:Name="AppTitleBar" Grid.Row="0" Background="{ThemeResource SystemAltMediumColor}">
-            <TextBlock x:ConnectionId='60' x:Name="TitleBar" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,5,0,0" FontFamily="MintSans" Foreground="Black"/>
+            <TextBlock x:ConnectionId='57' x:Name="TitleBar" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,5,0,0" FontFamily="MintSans" Foreground="Black"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBlock Text="Dossier nummer" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
-            <TextBox x:ConnectionId='55' x:Name="DossiernrTextBox" Width="auto" TextAlignment="Center"/>
-            <TextBlock Text="Klant" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
-            <TextBox x:ConnectionId='56' x:Name="KlantTextBox" Width="auto" TextAlignment="Center"/>
-            <TextBlock Text="Boorplaats" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
-            <TextBox x:ConnectionId='57' x:Name="BoorplaatsTextBox" Width="auto" TextAlignment="Center"/>
-            <TextBlock Text="Extra data" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
-            <TextBox x:ConnectionId='58' x:Name="GeonrTextBox" Width="auto" TextAlignment="Center" PlaceholderText="GEO-24/XXX"/>
-            <TextBox x:ConnectionId='59' x:Name="Meettoestel" Width="auto" TextAlignment="Center" Text="dGPS" PlaceholderText="GPS toestel"/>
+        <StackPanel x:ConnectionId='3' x:Name="AlgemeneInfo" Orientation="Horizontal" Grid.Row="1">
+            <TextBlock Text="Extra data" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16"/>
+            <TextBox x:ConnectionId='55' x:Name="GeonrTextBox" Width="auto" TextAlignment="Center" PlaceholderText="GEO-24/XXX"/>
+            <TextBox x:ConnectionId='56' x:Name="Meettoestel" Width="auto" TextAlignment="Center" Text="dGPS" PlaceholderText="GPS toestel"/>
         </StackPanel>
-        <TabView x:ConnectionId='3' x:Name="Content" Grid.Row="1"                                                                                          CanReorderTabs="True">
+        <TabView x:ConnectionId='4' x:Name="Content" Grid.Row="2"                                                                                          CanReorderTabs="True">
 
             <!--tabs, in principe zijn er hier 0 (voorlopig nog 1 als template), bij een druk op New wordt er een template tablad aangemaakt als frame, bij druk op Open maakt hij x aantal tabs aan op basis van aantal boringen in het te openen bestand-->
-            <TabViewItem x:ConnectionId='4' x:Name="tab1" Header="B1" IsClosable="False">
+            <TabViewItem x:ConnectionId='5' x:Name="tab1" Header="B1" IsClosable="False">
 
                 <!--dit is een template van hoe het info gedeelte eruit ziet van een boring, moet ergens opgeslaan worden als template die kan opgeroepen worden bij aanmaken van nieuwe frame-->
                 <Grid Background="#f9f9f9">
@@ -41,10 +37,10 @@
                         <ColumnDefinition Width="40*"/>
                     </Grid.ColumnDefinitions>
                     <Image Source="Assets/Logo/BoreWhole.png" Margin="0,0,0,0" Grid.Column="2" Opacity="0.3"/>
-                    <ScrollViewer x:ConnectionId='5' x:Name="Boorstaat" Grid.Column="0">
+                    <ScrollViewer x:ConnectionId='6' x:Name="Boorstaat" Grid.Column="0">
                         <Rectangle Fill="White" Margin="50,15,25,15" Height="2000"/>
                     </ScrollViewer>
-                    <ScrollViewer x:ConnectionId='6'  x:Name="AlgemeneInfo" Grid.Column="1">
+                    <ScrollViewer Grid.Column="1">
                         <StackPanel VerticalAlignment="Top" Orientation="Vertical" Padding="15">
                             <TextBlock Text="Boring nummer" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,5" FontSize="16"/>
                             <TextBox x:ConnectionId='46' x:Name="BoringnrTextBox" Text="B1" Width="auto" TextAlignment="Center"/>

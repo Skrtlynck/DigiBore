@@ -21,34 +21,40 @@ public class ProjectsRepository : IProjectsRepository
 
     public ProjectsRepository()
     {
-        string currentYear = DateTime.Now.Year.ToString();
-        InitData(currentYear);
+        InitData();
     }
 
     public void AddProject(Project project) => Projects.Add(project);
 
-    public void InitData(string year)
+    public void InitData()
     {
         //werken van Geolab of werken van thuis
-        var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers\\Dossiers " + year);
-        //var directories = Directory.GetDirectories("C:\\Technische data\\Dossiers\\Dossiers " + year);
+        //var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers);
+        var directories = Directory.GetDirectories("C:\\Technische data\\Dossiers");
 
-        // Skip header
-        directories = directories.Skip(1).ToArray();
-
-        foreach (var projectPath in directories)
+        foreach (var jaarmap in directories)
         {
-            var project = projectPath.Split('\\');
-            var projectInfo = project[4].Split("_");
-            var lastEdited = Directory.GetLastWriteTime(projectPath);
-            Projects.Add(new()
+            // Skip voorbeeldfile
+
+            var dossiers = Directory.GetDirectories(jaarmap);
+            dossiers = dossiers.Skip(1).ToArray();
+
+            foreach (var dossierPath in dossiers)
             {
-                ProjectPath = projectPath,
-                ProjectNumber = projectInfo[0],
-                Customer = projectInfo[1],
-                Location = projectInfo[2],
-                LastEdited = lastEdited,
-            });
+                var project = dossierPath.Split('\\');
+                var projectInfo = project[4].Split("_");
+                var lastEdited = Directory.GetLastWriteTime(dossierPath);
+                var jaar = jaarmap.Substring(jaarmap.Length - 2);
+                Projects.Add(new()
+                {
+                    ProjectPath = dossierPath,
+                    ProjectNumber = projectInfo[0],
+                    Customer = projectInfo[1],
+                    Location = projectInfo[2],
+                    LastEdited = lastEdited,
+                    ProjectYear = jaar,
+                });
+            }
         }
     }
 }

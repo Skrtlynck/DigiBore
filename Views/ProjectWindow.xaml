@@ -40,7 +40,7 @@
                     <ScrollViewer x:Name="Boorstaat" Grid.Column="0">
                         <Rectangle Fill="White" Margin="50,15,25,15" Height="2000"/>
                     </ScrollViewer>
-                    <ScrollViewer  x:Name="AlgemeneInfo" Grid.Column="1">
+                    <ScrollViewer Grid.Column="1">
                         <StackPanel VerticalAlignment="Top" Orientation="Vertical" Padding="15">
                             <TextBlock Text="Boring nummer" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,15,0,5" FontSize="16"/>
                             <TextBox x:Name="BoringnrTextBox" Text="B1" Width="auto" TextAlignment="Center"/>

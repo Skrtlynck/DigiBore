@@ -18,7 +18,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
+        
         <StackPanel Grid.Row="0" Grid.Column="1">
             <TextBlock x:Name="Error" FontSize="18" HorizontalAlignment="Center" Height="auto" Foreground="DarkRed" Margin="0,15,0,15" FontFamily="Calibri"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15,0,0,0">
@@ -26,6 +26,13 @@
                 <TextBlock x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" Height="auto" FontFamily="MintSans"/>
                 <Button Content="Volgend jaar" Margin="0,-15,0,0" Click="nextyearclick"/>
             </StackPanel>
+            <TextBox x:Name="filterBox"
+                     Width="10"
+                     IsEnabled="False"
+                     Opacity="0.1"
+                     VerticalAlignment="Bottom"
+                     TextChanged="ApplyDataGridFilterNu"
+                     HorizontalAlignment="Center"/>
         </StackPanel>
 
         <controls:DataGrid  x:Name="dataGrid"
