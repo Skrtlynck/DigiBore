@@ -26,15 +26,23 @@
                 <TextBlock x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" Height="auto" FontFamily="MintSans"/>
                 <Button Content="Volgend jaar" Margin="0,-15,0,0" Click="nextyearclick"/>
             </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Image Source="C:\BIBU\DigiBore Test\Assets\Logo\BoreWhole.png" Opacity="0.3" Height="150"/>
             <TextBox x:Name="filterBox"
                      Width="10"
                      IsEnabled="False"
                      Opacity="0.1"
-                     VerticalAlignment="Bottom"
-                     TextChanged="ApplyDataGridFilterNu"
-                     HorizontalAlignment="Center"/>
+                     TextChanged="ApplyDataGridFilterNu"/>
+            <TextBox x:Name="editableFilterBox"
+                     Width="auto"
+                     Height="32"
+                     Opacity="1"
+                     VerticalAlignment="Center"
+                     Margin="0,75,0,0"
+                     PlaceholderText="Zoek op locatie in alle projecten"
+                     TextChanged="ApplyDataGridFilterManual"/>
         </StackPanel>
-
         <controls:DataGrid  x:Name="dataGrid"
                                 ItemsSource="{Binding Projects}"
                                 AutoGenerateColumns="False"
@@ -46,6 +54,8 @@
                                 FontWeight="SemiLight"
                                 Grid.Row="1"
                                 Grid.ColumnSpan="3"
+                                Width="auto"
+                            RowHeight="40"
                                 Margin="10"
                                 IsReadOnly="True">
                 <controls:DataGrid.RowStyle>
@@ -59,10 +69,10 @@
                                     <MenuFlyoutItem x:Name="OpenProject"
                                                     Click="OpenProject_Click"
                                                     Text="Open dit project"/>
-                                <MenuFlyoutItem x:Name="CreateRapport"
+                                    <MenuFlyoutItem x:Name="CreateRapport"
                                                     Click="CreateRapport_Click"
                                                     Text="Creëer een rapport voor dit project"/>
-                            </MenuFlyout>
+                                </MenuFlyout>
                             </Setter.Value>
                         </Setter>
                     </Style>

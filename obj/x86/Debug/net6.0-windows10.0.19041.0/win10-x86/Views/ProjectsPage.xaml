@@ -20,21 +20,29 @@
         </Grid.ColumnDefinitions>
         
         <StackPanel Grid.Row="0" Grid.Column="1">
-            <TextBlock x:ConnectionId='6' x:Name="Error" FontSize="18" HorizontalAlignment="Center" Height="auto" Foreground="DarkRed" Margin="0,15,0,15" FontFamily="Calibri"/>
+            <TextBlock x:ConnectionId='8' x:Name="Error" FontSize="18" HorizontalAlignment="Center" Height="auto" Foreground="DarkRed" Margin="0,15,0,15" FontFamily="Calibri"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="15,0,0,0">
-                <Button x:ConnectionId='8' Content='Vorig jaar' Margin="0,-15,0,0"                          />
-                <TextBlock x:ConnectionId='9' x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" Height="auto" FontFamily="MintSans"/>
-                <Button x:ConnectionId='10' Content="Volgend jaar" Margin="0,-15,0,0"                      />
+                <Button x:ConnectionId='9' Content='Vorig jaar' Margin="0,-15,0,0"                          />
+                <TextBlock x:ConnectionId='10' x:Name="Year" Margin="30,0,0,0" FontSize="75" Width="200" Height="auto" FontFamily="MintSans"/>
+                <Button x:ConnectionId='11' Content="Volgend jaar" Margin="0,-15,0,0"                      />
             </StackPanel>
-            <TextBox x:ConnectionId='7' x:Name="filterBox"
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Image Source="C:\BIBU\DigiBore Test\Assets\Logo\BoreWhole.png" Opacity="0.3" Height="150"/>
+            <TextBox x:ConnectionId='6' x:Name="filterBox"
                      Width="10"
                      IsEnabled="False"
                      Opacity="0.1"
-                     VerticalAlignment="Bottom"
-                                                        
-                     HorizontalAlignment="Center"/>
+                                                        />
+            <TextBox x:ConnectionId='7' x:Name="editableFilterBox"
+                     Width="auto"
+                     Height="32"
+                     Opacity="1"
+                     VerticalAlignment="Center"
+                     Margin="0,75,0,0"
+                     PlaceholderText="Zoek op locatie in alle projecten"
+                                                            />
         </StackPanel>
-
         <controls:DataGrid x:ConnectionId='2'  x:Name="dataGrid"
                                 ItemsSource="{Binding Projects}"
                                 AutoGenerateColumns="False"
@@ -46,6 +54,8 @@
                                 FontWeight="SemiLight"
                                 Grid.Row="1"
                                 Grid.ColumnSpan="3"
+                                Width="auto"
+                            RowHeight="40"
                                 Margin="10"
                                 IsReadOnly="True">
                 <controls:DataGrid.RowStyle>
@@ -59,10 +69,10 @@
                                     <MenuFlyoutItem x:ConnectionId='4' x:Name="OpenProject"
                                                                              
                                                     Text="Open dit project"/>
-                                <MenuFlyoutItem x:ConnectionId='5' x:Name="CreateRapport"
+                                    <MenuFlyoutItem x:ConnectionId='5' x:Name="CreateRapport"
                                                                                
                                                     Text="Creëer een rapport voor dit project"/>
-                            </MenuFlyout>
+                                </MenuFlyout>
                             </Setter.Value>
                         </Setter>
                     </Style>

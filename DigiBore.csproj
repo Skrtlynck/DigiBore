@@ -12,7 +12,7 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Views\DrillingWindow.xaml" />
+    <None Remove="Views\BoringTabsPage.xaml" />
     <None Remove="Views\HomePage.xaml" />
     <None Remove="Views\ProjectsPage.xaml" />
     <None Remove="Views\ProjectWindow.xaml" />
@@ -24,7 +24,6 @@
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
 
@@ -46,7 +45,12 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\DrillingWindow.xaml">
+    <Content Update="Assets\Logo\BoreWhole.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\BoringTabsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

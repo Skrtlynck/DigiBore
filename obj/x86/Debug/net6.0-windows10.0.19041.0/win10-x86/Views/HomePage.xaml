@@ -10,7 +10,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock Text="Druk op de knop bovenaan om de projecten in te laden" FontSize="50" HorizontalAlignment="Center" Foreground="Black" VerticalAlignment="center" FontFamily="MintSans"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="C:\BIBU\DigiBore Test\Assets\Logo\BoreWhole.png" Opacity="0.3" Height="950"/>
+            <TextBlock Text="Druk op de knop bovenaan om de projecten in te laden" FontSize="50" Margin="0,-550,0,0" Foreground="Black" FontFamily="MintSans"/>
+        </StackPanel>
     </Grid>
 </Page>
 

@@ -74,11 +74,23 @@ public sealed partial class ProjectsPage : Page
             var type = typeof(Project);
             var propertyInfo = type.GetProperty(tag!);
 
-            dataGrid.ItemsSource = direction == DataGridSortDirection.Ascending
+            if (editableFilterBox.Text.Length > 0)
+            {
+                dataGrid.ItemsSource = direction == DataGridSortDirection.Ascending
+                       ? _projectsViewModel.Projects.Where(p => p.Location.ToLower().Contains(editableFilterBox.Text.ToLower())).OrderBy(p => propertyInfo!.GetValue(p))
+                       : _projectsViewModel.Projects.Where(p => p.Location.ToLower().Contains(editableFilterBox.Text.ToLower())).OrderByDescending(p => propertyInfo!.GetValue(p));
+                e.Column.SortDirection = direction;
+                ClearColumSortDirections(tag!);
+            }
+            else
+            {
+                dataGrid.ItemsSource = direction == DataGridSortDirection.Ascending
                        ? _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower())).OrderBy(p => propertyInfo!.GetValue(p))
                        : _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower())).OrderByDescending(p => propertyInfo!.GetValue(p));
-            e.Column.SortDirection = direction;
-            ClearColumSortDirections(tag!);
+                e.Column.SortDirection = direction;
+                ClearColumSortDirections(tag!);
+            }
+
         }
     }
 
@@ -120,7 +132,7 @@ public sealed partial class ProjectsPage : Page
         }
         else
         {
-            Window projectWindow = new ProjectWindow("NewFile", number, customer, location);
+            Window projectWindow = new ProjectWindow("", number, customer, location);
             projectWindow.Activate();
         }
     }
@@ -128,7 +140,9 @@ public sealed partial class ProjectsPage : Page
     private void CreateRapport_Click(object sender, RoutedEventArgs e)
     {
         //vanaf folder openen gaat via een klik, via deze knop de map rapport templates laten openen
-        //Process.Start(@"L:\Technische data\Rapport Templates);
+        Process process = new Process();
+        process.StartInfo.FileName = @"L:\Technische data\Rapport Templates";
+        process.Start();
     }
 
     private void ApplyDataGridFilterNu(object sender, TextChangedEventArgs e)
@@ -139,6 +153,19 @@ public sealed partial class ProjectsPage : Page
     private void ApplyDataGridFilter()
     {
         if (filterBox.Text is not null)
+        {
+            dataGrid.ItemsSource = _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower()));
+        }
+    }
+
+    private void ApplyDataGridFilterManual(object sender, TextChangedEventArgs e)
+    {
+        if (editableFilterBox.Text.Length > 0)
+        {
+            dataGrid.ItemsSource = _projectsViewModel.Projects.Where(p => p.Location.ToLower().Contains(editableFilterBox.Text.ToLower()));
+        }
+
+        else
         {
             dataGrid.ItemsSource = _projectsViewModel.Projects.Where(p => p.ProjectYear.ToLower().Contains(filterBox.Text.ToLower()));
         }

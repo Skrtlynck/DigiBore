@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mCqKtIPU6o9N85RuACCqdu9p7PECZyhfEguU3aU7gaGwETFKyMGtlyBwZmWOOB12ImAWELDdvAFMRdAw90M1gg==",
+  "dgSpecHash": "cThGDneqG9PwwgLo9FB/jHGMJULpPGl7wJlUeXfanKSp5n/kzEP9wH3P0s3XYUbeqrPtuFvFLai9roZMu84hbw==",
   "success": true,
-  "projectFilePath": "C:\\BIBU\\DigiBore\\DigiBore.csproj",
+  "projectFilePath": "C:\\BIBU\\DigiBore Test\\DigiBore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Victor\\.nuget\\packages\\colorcode.core\\2.0.13\\colorcode.core.2.0.13.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\colorcode.winui\\2.0.13\\colorcode.winui.2.0.13.nupkg.sha512",
@@ -158,16 +158,16 @@
     "C:\\Users\\Victor\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Victor\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.25\\microsoft.netcore.app.runtime.win-x86.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.25\\microsoft.aspnetcore.app.runtime.win-x86.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.25\\microsoft.netcore.app.runtime.win-arm64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.25\\microsoft.aspnetcore.app.runtime.win-x64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.25\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.25\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.25\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.25\\microsoft.netcore.app.runtime.win-x64.6.0.25.nupkg.sha512",
-    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.25\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.25.nupkg.sha512"
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.23\\microsoft.netcore.app.runtime.win-x86.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.29\\microsoft.windows.sdk.net.ref.10.0.19041.29.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.23\\microsoft.aspnetcore.app.runtime.win-x86.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.23\\microsoft.netcore.app.runtime.win-arm64.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.23\\microsoft.aspnetcore.app.runtime.win-x64.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.23\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.23\\microsoft.netcore.app.runtime.win-x64.6.0.23.nupkg.sha512",
+    "C:\\Users\\Victor\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.23\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.23.nupkg.sha512"
   ],
   "logs": []
 }

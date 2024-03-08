@@ -681,11 +681,6 @@ C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\P
 C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.xbf
 C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.xbf
 C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.xbf
-C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xbf
-C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.i.cs
-C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.cs
-C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xaml
-C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xbf
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.i.cs
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.g.cs
 C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.g.i.cs
@@ -701,3 +696,9 @@ C:\BIBU\DigiBore\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Projec
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\DrillingWindow.xbf
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectsPage.xbf
 C:\BIBU\DigiBore\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\ProjectWindow.xbf
+C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Logo\BoreWhole.png
+C:\BIBU\DigiBore Test\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\BoringTabsPage.xbf
+C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\BoringTabsPage.g.i.cs
+C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\BoringTabsPage.g.cs
+C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\BoringTabsPage.xaml
+C:\BIBU\DigiBore Test\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\BoringTabsPage.xbf

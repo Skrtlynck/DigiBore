@@ -25,18 +25,60 @@ namespace DigiBore.Views
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
             TitleBar.Text = number + " " + customer + " " + location;
+            InitData(xmlpath);
+            ProjectWindowName.Title = customer + " " + location;
+        }
+
+        public static async Task<string> ShowAddDialogAsync(string title)
+        {
+            var inputTextBox = new TextBox { AcceptsReturn = false };
+            var dialog = new ContentDialog
+            {
+                Content = inputTextBox,
+                Title = title,
+                IsSecondaryButtonEnabled = true,
+                PrimaryButtonText = "Maak aan",
+                SecondaryButtonText = "Annuleer"
+            };
+            if (await dialog.ShowAsync() == ContentDialogResult.Primary)
+                return inputTextBox.Text;
+            else
+                return "";
+        }
+        private void InitData(string xmlpath)
+        {
+            if (xmlpath == "")
+            {
+
+                    var newBoring = new TabViewItem();
+                    newBoring.Header = "test";
+
+
+                    Frame frame = new Frame();
+                    newBoring.Content = frame;
+                    frame.Navigate(typeof(BoringTabPage));
+
+                    Content.TabItems.Add(newBoring);
+
+
+            }
+
+            else
+            {
+
+            }
         }
 
         private void TabView_AddTabButtonClick(TabView sender, object args)
         {
 
             var newBoring = new TabViewItem();
-            newBoring.Header = "Boringnaam";
+            newBoring.Header = "test";
 
-            //
-            //Frame frame = new Frame();
-            //newBoring.Content = frame;
-            //frame.Navigate(typeof(Page1));
+            
+            Frame frame = new Frame();
+            newBoring.Content = frame;
+            frame.Navigate(typeof(BoringTabPage));
 
             sender.TabItems.Add(newBoring);
         }
@@ -48,7 +90,7 @@ namespace DigiBore.Views
                 Content = "Ben je zeker dat je deze boring wilt verwijderen?",
                 PrimaryButtonText = "Verwijder",
                 CloseButtonText = "Annuleer",
-                XamlRoot = Content.XamlRoot // Why do I need to explicitly set this ?!
+                XamlRoot = Content.XamlRoot
 
             };
 
@@ -61,7 +103,7 @@ namespace DigiBore.Views
                     Content = "Ben je HEEL zeker dat je deze boring DEFINITIEF wilt verwijderen?",
                     PrimaryButtonText = "Verwijder definitief",
                     CloseButtonText = "Annuleer",
-                    XamlRoot = Content.XamlRoot // Why do I need to explicitly set this ?!
+                    XamlRoot = Content.XamlRoot
 
                 };
                 ContentDialogResult resultaat2 = await deleteBoringDialog.ShowAsync();
