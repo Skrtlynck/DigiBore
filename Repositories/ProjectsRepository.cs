@@ -29,8 +29,8 @@ public class ProjectsRepository : IProjectsRepository
     public void InitData()
     {
         //werken van Geolab of werken van thuis
-        var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers");
-        //var directories = Directory.GetDirectories("C:\\Technische data\\Dossiers");
+        //var directories = Directory.GetDirectories("L:\\Technische data\\Dossiers");
+        var directories = Directory.GetDirectories("C:\\Technische data\\Dossiers");
 
         foreach (var jaarmap in directories)
         {

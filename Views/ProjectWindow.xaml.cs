@@ -69,18 +69,35 @@ namespace DigiBore.Views
             }
         }
 
-        private void TabView_AddTabButtonClick(TabView sender, object args)
+        private async Task<string> BoringNummerOpvragen(string title)
         {
+            var vraag = new TextBox(); 
+            vraag.PlaceholderText = "Boringnummer";
+            var boringNummerVraag = new ContentDialog
+            {
+                Title = title,
+                Content = vraag,
+                PrimaryButtonText = "Verwijder",
+                CloseButtonText = "Annuleer",
+                XamlRoot = Content.XamlRoot
 
+            };
+
+            await boringNummerVraag.ShowAsync();
+
+            return vraag.Text;
+        }
+
+        private async void TabView_AddTabButtonClick(TabView sender, object args)
+        {
             var newBoring = new TabViewItem();
-            newBoring.Header = "test";
+            newBoring.Header = await BoringNummerOpvragen("Wat is het boringnummer?");
 
-            
             Frame frame = new Frame();
             newBoring.Content = frame;
             frame.Navigate(typeof(BoringTabPage));
-
             sender.TabItems.Add(newBoring);
+            sender.SelectedItem = newBoring;
         }
         private async void Tabs_TabCloseRequested(TabView sender, TabViewTabCloseRequestedEventArgs args)
         {

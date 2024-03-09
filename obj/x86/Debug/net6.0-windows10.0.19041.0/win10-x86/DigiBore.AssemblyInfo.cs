@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DigiBore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdb5f1722d306dbafe0d146d210ac7bbc4bdb68e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DigiBore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DigiBore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
